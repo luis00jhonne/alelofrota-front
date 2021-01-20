@@ -5,5 +5,6 @@ export class Vehicle {
     model: string;
     manufacturer: string;
     status: boolean;
+    data: object;
   }
   

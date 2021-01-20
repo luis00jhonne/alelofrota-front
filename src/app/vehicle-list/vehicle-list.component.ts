@@ -24,11 +24,14 @@ export class VehicleListComponent implements OnInit {
       .subscribe(vehicles => this.vehicles = vehicles);
   }
 
-  addVehicle(): void {    
+  addVehicle(vehicle : Vehicle): void {    
+    this.vehicleService.addVehicle(vehicle)
+      .subscribe(vehicle => { this.vehicles.push(vehicle);
+    });
   }
 
   deleteVehicle(vehicle: Vehicle): void{
-
+    this.vehicleService.deleteVehicle(vehicle).subscribe();
   }
 
 }

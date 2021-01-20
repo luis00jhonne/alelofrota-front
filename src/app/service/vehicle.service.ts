@@ -20,8 +20,9 @@ export class VehicleService {
   getVehicles(page: number, limit: number): Observable<Vehicle[]>{
     const url = `${this.vehiclesApiUrl}?page=${page}&limit=${limit}`;
 
-    return this.http.get<Vehicle[]>(this.vehiclesApiUrl)
+    return this.http.get<Vehicle[]>(url)
     .pipe(
+      map(response => response.data),
       catchError(this.handleError<Vehicle[]>('getVehicles', []))
     );
   }

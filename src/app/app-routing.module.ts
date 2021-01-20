@@ -19,6 +19,10 @@ const routes: Routes = [
         component: VehicleDetailComponent
       },
       {
+        path: 'vehicle-detail/:id',
+        component: VehicleDetailComponent
+      },
+      {
         path: 'vehicle-list',
         component: VehicleListComponent
       },
