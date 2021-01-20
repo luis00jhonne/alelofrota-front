@@ -1,0 +1,228 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="index3.html" class="brand-link">
+<!--    <img src="../assets/dist/img/mateus.svg" alt="Mateus Logo" class="brand-image img-lg elevation-3"-->
+<!--         style="opacity: .8">-->
+    <span class="brand-text font-weight-light"> Painel E-commerce</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="../assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="#" class="d-block">Alexander Pierce</a>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Home
+            </p>
+          </a>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-database"></i>
+            <p>
+              Estoque
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/alterar-estoque-minimo']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Alterar Mínimo</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/verificar-estoque']"  class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verificar Estoque</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-shopping-cart"></i>
+            <p>
+              Pedido
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/listar-cancelamento']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Listar Cancelamento</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/verificar-endereco']"  class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verificar Endereço</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/criar-carta-credito']"  class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Carta de Crédito</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/integrar-pedido']"  class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Integrar Magento</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/dados-pedido']"  class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Dados do Pedido</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-bolt"></i>
+            <p>
+              Campanha
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/criar-cobranca']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Criar Cobrança</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/verificar-cobranca']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verificar Cobrança</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-dollar-sign"></i>
+            <p>
+              Preço
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/atualizar-preco']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Atualizar Preço</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/verificar-preco']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verificar Preço</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a [routerLink]="['/criar-programacao']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Criar Programação</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Cliente
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/atualizar-limite']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Atualizar Limite</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-uikit"></i>
+            <p>
+              Kit
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/criar-kit']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Criar Kit</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/verificar-kit']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Verificar Kit</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-truck"></i>
+            <p>
+              Entregas
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a [routerLink]="['/']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tela 1</p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="['/']" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Tela 2</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
