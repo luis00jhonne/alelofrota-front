@@ -20,16 +20,14 @@
           <div class="col-6">
             <div class="card">
               <div class="card-body">
-                  <div id="search-component">
-                    <input #searchBox id="search-box" class="form-control"/>
-                    <button class="btn btn-default">Buscar</button>
-                  </div>
-                </div>
+                <app-vehicle-search></app-vehicle-search>
+              </div>
             </div>
           </div>
           <div class="col-6">
             <div class="card">
               <div class="card-body">
+                  <h4><label for="search-box">Vehicle Options</label></h4>
                   <a routerLink="/vehicle-detail" class="btn btn-default">Add Vehicle</a>
               </div>
             </div>

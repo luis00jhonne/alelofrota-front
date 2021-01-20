@@ -9,13 +9,15 @@ import { DashboardComponent } from './templates/dashboard/dashboard.component';
 import { LayoutModule } from './layout/layout.module';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
+import { VehicleSearchComponent } from './vehicle-search/vehicle-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     VehicleListComponent,
-    VehicleDetailComponent
+    VehicleDetailComponent,
+    VehicleSearchComponent
   ],
     imports: [
         BrowserModule,
