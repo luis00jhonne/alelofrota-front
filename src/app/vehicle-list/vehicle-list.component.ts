@@ -31,7 +31,11 @@ export class VehicleListComponent implements OnInit {
   }
 
   deleteVehicle(vehicle: Vehicle): void{
-    this.vehicleService.deleteVehicle(vehicle).subscribe();
+    if (window.confirm('Do yout want to delete this vehicle?')){
+      this.vehicleService.deleteVehicle(vehicle).subscribe(
+        () => this.getVehicles()
+      );
+    }    
   }
 
 }
