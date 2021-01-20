@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { EstoqueMinimoService } from './estoque-minimo.service';
+import { VehicleService } from './vehicle.service';
 
-describe('EstoqueMinimoService', () => {
-  let service: EstoqueMinimoService;
+describe('VehicleService', () => {
+  let service: VehicleService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(EstoqueMinimoService);
+    service = TestBed.inject(VehicleService);
   });
 
   it('should be created', () => {
