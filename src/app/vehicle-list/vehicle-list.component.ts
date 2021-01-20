@@ -5,10 +5,11 @@ import { VehicleService } from '../service/vehicle.service';
 @Component({
   selector: 'app-vehicle-list',
   templateUrl: './vehicle-list.component.html',
-  styleUrls: ['./vehicle-list.component.scss']
+  styleUrls: ['./vehicle-list.component.scss'],
 })
 export class VehicleListComponent implements OnInit {
 
+  p: number = 1;
   vehicles: Vehicle[];
 
   constructor(private vehicleService: VehicleService) { }
@@ -36,6 +37,12 @@ export class VehicleListComponent implements OnInit {
         () => this.getVehicles()
       );
     }    
+  }
+
+  search(plate: string): void{
+    this.vehicleService.searchVehicleByPlate(plate).subscribe(
+      vehicles => this.vehicles = vehicles
+    );
   }
 
 }

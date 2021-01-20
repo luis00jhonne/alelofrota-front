@@ -42,6 +42,7 @@ export class VehicleService {
     const url = `${this.vehiclesApiUrl}?filter=${term}`;
 
     return this.http.get<Vehicle[]>(url).pipe(
+      map(response => response.data),
       catchError(this.handleError<Vehicle[]>('searchVehicleByPlate', []))
     );
   }

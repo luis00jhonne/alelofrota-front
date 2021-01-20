@@ -9,22 +9,22 @@ import { DashboardComponent } from './templates/dashboard/dashboard.component';
 import { LayoutModule } from './layout/layout.module';
 import { VehicleListComponent } from './vehicle-list/vehicle-list.component';
 import { VehicleDetailComponent } from './vehicle-detail/vehicle-detail.component';
-import { VehicleSearchComponent } from './vehicle-search/vehicle-search.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     VehicleListComponent,
-    VehicleDetailComponent,
-    VehicleSearchComponent
+    VehicleDetailComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         LayoutModule,
         FormsModule,
-        HttpClientModule
+        HttpClientModule,
+        NgxPaginationModule
     ],
   providers: [],
   bootstrap: [AppComponent]

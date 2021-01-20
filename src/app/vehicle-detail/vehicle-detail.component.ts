@@ -24,7 +24,6 @@ export class VehicleDetailComponent implements OnInit {
 
   getVehicle(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    console.log(id);
     if (id !== null && id > 0){
       this.vehicleService.getVehicleById(id)
         .subscribe(vehicle => this.vehicle = vehicle);

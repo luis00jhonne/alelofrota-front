@@ -20,7 +20,15 @@
           <div class="col-6">
             <div class="card">
               <div class="card-body">
-                <app-vehicle-search></app-vehicle-search>
+                <div id="search-component">
+                  <h4><label for="search-box">Vehicle Search</label></h4>
+                  <div class="input-group input-group-sm">
+                    <input #searchBox id="search-box" class="form-control"/>
+                    <span class="input-group-append">
+                      <button class="btn btn-info btn-flat" (click)="search(searchBox.value)">Search</button>
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -50,7 +58,8 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let vehicle of vehicles">
+                      <tr *ngFor="let vehicle of vehicles | paginate: {id: 'vehiclesList',
+                        itemsPerPage: 10, currentPage: p, totalItems: total}">
                         <td>{{vehicle.plate}}</td>
                         <td>{{vehicle.model}}</td>
                         <td>{{vehicle.manufacturer}}</td>
