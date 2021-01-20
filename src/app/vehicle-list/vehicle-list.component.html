@@ -21,7 +21,7 @@
             <div class="card">
               <div class="card-body">
                   <div id="search-component">
-                    <input #searchBox id="search-box" class=""/>
+                    <input #searchBox id="search-box" class="form-control"/>
                     <button class="btn btn-default">Buscar</button>
                   </div>
                 </div>
@@ -59,10 +59,11 @@
                         <td>{{vehicle.color}}</td>
                         <td>{{vehicle.status}}</td>
                         <td>
-                          <a routerLink="/vehicle-detail/{{vehicle.id}}">
+                          <a routerLink="/vehicle-detail/{{vehicle.id}}"
+                             class="btn btn-success">
                             Edit
                           </a>
-                          <button class="delete" title="Delete Vehicle" 
+                          <button class="btn btn-danger" title="Delete Vehicle" 
                             (click)="delete(vehicle)">Delete
                           </button>
                         </td>

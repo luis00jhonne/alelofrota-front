@@ -27,9 +27,10 @@ export class VehicleService {
     );
   }
 
-  getVehicleById(id: number): Observable<Vehicle> {
+  getVehicleById<Data>(id: number): Observable<Vehicle> {
     const url = `${this.vehiclesApiUrl}/${id}`;
-    return this.http.get<Vehicle>(url).pipe(
+    return this.http.get<Vehicle[]>(url).pipe( 
+      map(response => response.data),
       catchError(this.handleError<Vehicle>(`getVehicleById id=${id}`))
     );
   }

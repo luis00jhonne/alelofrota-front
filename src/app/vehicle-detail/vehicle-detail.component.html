@@ -1,1 +1,57 @@
-<p>vehicle-detail works!</p>
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0 text-dark">Vehicle Detail</h1>
+        </div><!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Vehicle</a></li>
+            <li class="breadcrumb-item active">Vehicle Detail</li>
+          </ol>
+        </div><!-- /.col -->
+      </div><!-- /.row -->
+    </div>
+  </div>
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <form role="form">
+              <div class="card-body">
+              
+                <div class="form-group">
+                  <label for="plate">Plate</label>
+                  <input [(ngModel)]="vehicle.plate" type="text" class="form-control" id="plate" name="plate" placeholder="Plate">
+                </div>
+                <div class="form-group">
+                    <label for="model">Model</label>
+                    <input [(ngModel)]="vehicle.model" type="text" class="form-control" id="model" name="model" placeholder="Model">
+                </div>
+                <div class="form-group">
+                    <label for="manufacturer">Manufacturer</label>
+                    <input [(ngModel)]="vehicle.manufacturer" type="text" class="form-control" id="manufacturer" name="manufacturer" placeholder="Manufacturer">
+                </div>
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input [(ngModel)]="vehicle.color" type="text" class="form-control" id="color" name="color" placeholder="Color">
+                </div>
+
+              </div>  
+              <div class="card-footer">
+                <button type="submit" class="btn btn-default" (click)="goBack()">Voltar</button>
+                <button type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.card -->
+        </div>
+      </div>
+      <!-- /.row -->
+    </div><!-- /.container-fluid -->
+</section>
+  
